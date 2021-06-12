@@ -1,0 +1,17 @@
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+var kidsWithCandies = function(candies, extraCandies) {
+    var ans=[];
+    for(let i=0;i<candies.length;i++){
+        if(candies[i]+extraCandies>=Math.max(...candies)){
+            ans.splice(ans.length,0,true);
+        }
+        else{
+            ans.splice(ans.length,0,false);
+        }
+    }
+    return ans;
+};
